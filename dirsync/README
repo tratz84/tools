@@ -1,0 +1,30 @@
+
+Dirsync
+
+This simple tool that copies a windows folder to an sftp server
+
+Compile environment used was MinGW
+
+
+Dependencies,
+	- mingw			http://www.mingw.org/
+	- libssh		http://www.libssh.org/
+	- iniparser		http://ndevilla.free.fr/iniparser/
+
+
+
+Usage
+
+Configure the example "settings.ini" file. You can create as many ini files as you want. 
+
+local_directory	path to windows folder to backup
+host	ssh host
+port	sftp port number, defaults to 22
+username	 
+password	 
+remote_directory	path to remote directory, ie: /home/foo/files
+override	override existing files on remote server: 0=no, 1=yes
+Start by just executing dirsync with as argument your setting.ini file, ie: dirsync my_settings.ini 
+
+* Note, if used with "Task Scheduler", make sure the "Working directory" is the same as the place as dirsync.exe is in
+
